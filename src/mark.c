@@ -217,6 +217,10 @@ gboolean mark_run(const gchar *state,
 		goto out;
 	}
 
+	if (slot->mark_bad) {
+		*state = "bad";
+	}
+
 	if (g_strcmp0(state, "good") == 0) {
 		if (!r_mark_good(slot, &ierror)) {
 			res = FALSE;

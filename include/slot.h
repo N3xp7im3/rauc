@@ -41,6 +41,8 @@ typedef struct _RaucSlot {
 	gchar **extra_mkfs_opts;
 	/** the name this slot is known to the bootloader */
 	gchar *bootname;
+	/** flag to indicate that this slot should not be booted into */
+	gboolean mark_bad;
 	/** flag to indicate that this slot can be updated even if already mounted */
 	gboolean allow_mounted;
 	/** flag indicating if the slot is updatable */

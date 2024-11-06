@@ -498,6 +498,10 @@ hierarchical separator.
   Allows to specify custom filesystem creation options that will be passed to the slot's
   ``mkfs.<type>`` call (ext4, vfat, and ubifs only).
 
+``mark-bad=<true/false>`` (optional)
+  Mark this slot a bad such that it will not be booted anymore.
+  This is useful to prevent booting into another slot after the active one has been successfully installed.
+
 ``bootname=<name>`` (optional)
   Registers the slot for being handled by the
   :ref:`bootselection interface <bootloader-interaction>` with the ``<name>``
